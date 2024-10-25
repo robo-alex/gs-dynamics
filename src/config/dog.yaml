@@ -1,0 +1,51 @@
+train_config:
+  out_dir: "../log/dog"
+  phases: ["train", "valid"]
+  batch_size: 64
+  n_epochs: 1000
+  n_iters_per_epoch:
+    train: 100
+    valid: 10
+  log_interval: 10
+  random_seed: 42
+  n_his: 3
+  n_future: 5
+  mse_loss: 1.0
+  length_loss: 0.01
+
+model_config:
+  verbose: False
+
+  nf_particle: 512
+  nf_relation: 512
+  nf_effect: 512
+
+  # particle encoder
+  attr_dim: 2  # object and end effector
+  state_dim: 1  # x, y, z
+  motion_dim: 3
+  action_dim: 3
+  pstep: 3
+
+  # rel encoder
+  rel_attr_dim: 2
+  rel_group_dim: 1  # sum of difference of group one-hot vector
+  rel_distance_dim: 3
+
+dataset_config:
+  datasets:
+    - name: "episodes_dog"
+      materials: ["dog"]
+      connect_all: True
+      base_dir: "/data/d3dg"
+      fps_radius_range: [0.03, 0.03]
+      adj_radius_range: [0.08, 0.08]
+      state_noise: 
+        train: 0.003
+        valid: 0.0
+      topk: 6
+      max_n: 1
+      max_nobj: 100
+      max_tool: 1
+      max_nR: 900
+

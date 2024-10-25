@@ -1,0 +1,12 @@
+# training
+weight_im: 1.0
+weight_seg: 3.0
+grad_thresh: 0.0002
+remove_threshold: 0.005
+remove_thresh_5k: 0.25
+scale_scene_radius: 0.05
+num_iters: 10000
+
+# rendering
+near: 0.01
+far: 100
