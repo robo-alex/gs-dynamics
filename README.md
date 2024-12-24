@@ -81,7 +81,7 @@ python gs_sim_real_gradio.py --config config/rope.py
 
 ### Data preparation
 
-Data should be stored in the folder ```{base_path}/data``` (you can define your own base path). Download our data [here](https://drive.google.com/drive/folders/1AZOXdu5MrhvuN28YzdyX8mVxNFawsN5d?usp=sharing), unzip, and put it in the data folder like this:
+Data should be stored in the folder ```{base_path}/data``` (you can define your own base path). Download our data [here](https://drive.google.com/drive/folders/1AZOXdu5MrhvuN28YzdyX8mVxNFawsN5d?usp=sharing) and [here](https://drive.google.com/file/d/1CNwUj_VYI0AIfxSpIU_QEXFtArLrG0uD/view?usp=sharing), unzip, and put it in the data folder like this:
 ```
 {base_path}/data/episodes_rope
 {base_path}/data/episodes_dog
